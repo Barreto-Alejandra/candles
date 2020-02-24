@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap" rel="stylesheet">
+  <title>Candles</title>
+</head>
+<style>
+  html, body {
+    height: 100%;
+    /* min-height: 100%; */
+  }
+
+
+  body{
+    background-color: #111d5e;
+  }
+
+
+  h1 {
+    color: white;
+    font-family: 'Lakki Reddy', cursive;
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    min-height: 70%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+
+  .candle {
+    width: 150px;
+    height: 300px;
+    margin: 0 22px;
+    background: #fff;
+    background: linear-gradient(to right, #ffffff 40%, #f5dda9 100%);
+    border-bottom-left-radius: 100% 50px;
+    border-bottom-right-radius: 100% 50px;
+    -webkit-border-bottom-left-radius: 100% 50px;
+    -webkit-border-bottom-right-radius: 100% 50px;
+    position: relative; 
+    text-align: center;
+    font-size: 2.5 em;
+    color: black;
+    letter-spacing: 10px;
+    justify-content: center;
+    -webkit-justify-content: center;
+  }
+
+  .candle b {
+    margin: 0 30px;
+    position: relative;
+    top: 20px;
+  } 
+
+
+  .candle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    border-radius: 100%;
+    top: -25px;  
+    left: 0;   
+  }
+
+  .candle.small {
+    margin-top: 143px;
+    height: 150px;
+  }
+
+  .fire {
+    width: 10px;
+    height: 28px;
+    background-color: #9c898c;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: -56px;
+    border-radius: 3px;
+  }
+
+
+  .fire:before, .fire:after{
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: 50% 100%;
+  }
+
+  .fire:before {
+    width: 36px;
+    height: 44px;
+    background-color: #e47312;
+    left: -12px;
+    top: -27px;
+    /* animation: fire 1s ease-in-out infinite 0.3s; */
+
+  }
+
+/*   .shining {
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: -100px;
+    animation: fire 1s ease-in-out infinite 0.3s;
+
+  } */
+
+  .fire:after {
+    width: 16px;
+    height: 25px;
+    background-color: #fff;
+    left: -3px;
+    top: -10px;
+    /* animation: fire 1s ease-in-out infinite 0.1s; */
+  }
+
+/*   .fire span {
+    background-color: #f9e630;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    left: -15px;
+    top: -36px;
+    /* animation: fire 1s ease-in-out infinite 0.2s; */ */
+
+  }
+
+  .candle:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: inherit;
+    left: 50%;
+    bottom: -50%;
+    margin-left: -75px;
+    z-index: -1;
+    transform: skew(45deg);
+  } 
+  
+  .candle.big {
+    height: 300px;
+  }
+
+  .candle.big .mouth {
+    background-color: #59323d;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+  }
+
+  /* tongue */
+  .candle.big .mouth:before {
+    content: "";
+    background-color: #b73e6a;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: inherit;
+    bottom: 2px;
+  }
+
+  .inflate {
+    background-color: #f5dda9;
+    width: 60px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    z-index: -1;
+  }
+
+  /* animation */
+/*   @keyframes fire {
+    0 {transform: scale(0);}
+    50% {transform: scale(0.8);}
+    100% {transform: scale(0);}
+
+  }
+   */
+
+  /* .sombra {
+    width: 50%;
+    height: 50px;
+    position: absolute;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    z-index: -1;
+    bottom: -70px;
+  } */
+
+  h3 {
+    color: white;
+    font-family: 'Lakki Reddy', cursive;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;     
+  }
+</style>
+<body>
+  <header>
+    <h1>Candles</h1>
+  </header>
+  <section class="container">
+    <div class="candle small">
+      <b>.</b><b>.</b>
+      <p class="fire">
+          <span></span>
+      </p>
+      <div class="shining"></div>
+    </div>
+
+    <div class="candle big">
+      <b>.</b><b>.</b>
+      <div class="mouth"></div>
+      <div class="inflate"></div>
+    </div>
+  </section>
+  <footer>
+    <h3>Project inspired by Daniel Snow</h3>
+  </footer>
+</body>
+</html>
